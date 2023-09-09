@@ -1,5 +1,3 @@
-module.exports= {
-  function () {
-    console.log('----------------------')
-  }  
+export default function () {
+  console.log('----------------------')
 }
