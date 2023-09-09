@@ -1,6 +1,8 @@
+#!/usr/bin/env node
+
 import looksSame from 'looks-same'
 import puppeteer from 'puppeteer'
-import simpleVrtConfig from './simple-vrt.config.mjs'
+import simpleVrtConfig from '../../simple-vrt.config.mjs'
 
 const main = async () => {
   const browser = await puppeteer.launch({headless: 'new'})
