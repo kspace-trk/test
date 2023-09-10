@@ -17,7 +17,17 @@ const main = async () => {
     strict: false,
     tolerance: 50,
   })
+  const result = await looksSame(simpleVrtConfig.expect, simpleVrtConfig.screenshotFileName)
+  if (result.equal) {
+    console.log(colorizeText("Test passed", "32"))
+  } else {
+    console.error(colorizeText("Test failed: Expected " + expectedResult + ", but got " + result, "31"))
+  }
   await browser.close()
+}
+
+const colorizeText =(text, colorCode) => {
+  return `\x1b[${colorCode}m${text}\x1b[0m`
 }
 
 main()
