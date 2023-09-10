@@ -21,7 +21,7 @@ const main = async () => {
   if (result.equal) {
     console.log(colorizeText("Test passed", "32"))
   } else {
-    console.error(colorizeText("Test failed: Expected " + expectedResult + ", but got " + result, "31"))
+    console.error(colorizeText("Test failed. Exported difference files to " + simpleVrtConfig.diffFileName, "31"))
   }
   await browser.close()
 }
